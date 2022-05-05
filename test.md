@@ -1,7 +1,7 @@
-# Scarface
+# naruto
     
 This is a story all about how 
 
 ## Description
 
-Say hello to my little friend
+a less fortuniate juvinile, who turns his life around and eventually becomes hokage
