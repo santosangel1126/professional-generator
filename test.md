@@ -1,7 +1,7 @@
-# naruto
+# Naruto
     
 This is a story all about how 
 
 ## Description
 
-a less fortuniate juvinile, who turns his life around and eventually becomes hokage
+a young juvenile fights for the right to get noticed. Naruto, an orphan who has the dream to become a hokage  . 

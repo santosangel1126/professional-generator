@@ -23,12 +23,29 @@ const questions = [
         message: "what was your motiviation?",
         name: "inspiration"
     },
+    {
+        type: "input",
+        message: "Why did you build the project? ( note: The Answer is not 'Because it was a homework assignment)'",
+        name: " purpose "
+    },
+ {
+     type: "list",
+     message: "what format of coding was used in your project? ",
+     name: "format of codes used ", 
+     choice: [
+     "css", 
+     "html", 
+     "javascript", 
+     "node", 
+     "inquirer",
+     ]
+ }, 
 ];
 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
         if(err) throw err;
-        console.log()
+        console.log(err)
     })
 }
 
