@@ -32,7 +32,7 @@ const questions = [
      type: "list",
      message: "what format of coding was used in your project? ",
      name: "format of codes used ", 
-     choice: [
+     choices:[
      "css", 
      "html", 
      "javascript", 
@@ -40,6 +40,36 @@ const questions = [
      "inquirer",
      ]
  }, 
+ {
+     type: "list",
+     message: "Please choose the appropriate license for this project:",
+     name: "license",
+     choices: [
+         "Apache",
+         "Academic",
+         "GNU",
+         "ISC",
+         "MIT",
+         "Chrome",
+         "Open"
+     ]
+ },
+ {
+type: "input",
+name: "contributing",
+message: "Who are the contributors of this project"
+ },
+ {
+     type: "input",
+     name: "username",
+     message: "Please enter your Github username:"
+},
+{
+    type: "input",
+    name: "email",
+    message: "Please input your email address:"
+},
+
 ];
 
 function writeToFile(fileName, data) {
@@ -53,7 +83,7 @@ function init() {
     inquirer.prompt(questions)
     .then(answers => {
         const result = generatePage(answers);
-        writeToFile("test.md", result)
+        writeToFile("README.md", result)
     })
 }
 
