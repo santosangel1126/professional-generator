@@ -4,6 +4,7 @@ const fs = require('fs');
 //link to page of README being generated
 const generatePage = require('./test')
 
+
 // TODO: Create an array of questions for user input
 
 const questions = [
@@ -31,7 +32,7 @@ const questions = [
  {
      type: "list",
      message: "what format of coding was used in your project? ",
-     name: "format of codes used ", 
+     name: "formats", 
      choices:[
      "css", 
      "html", 
@@ -41,7 +42,7 @@ const questions = [
      ]
  }, 
  {
-     type: "list",
+    type: "list",
      message: "Please choose the appropriate license for this project:",
      name: "license",
      choices: [
@@ -64,13 +65,24 @@ message: "Who are the contributors of this project"
      name: "username",
      message: "Please enter your Github username:"
 },
-{
+{// provide user email for contact information
     type: "input",
     name: "email",
-    message: "Please input your email address:"
-},
-
+    message: "Please input your email address:",
+    validate: userEmail => {
+        if (userEmail){
+            return true;
+        } else {
+            console.log('Please enter users Email');
+            return false;
+        }
+      }
+    }
 ];
+
+
+
+
 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
@@ -86,5 +98,16 @@ function init() {
         writeToFile("README.md", result)
     })
 }
+// function to initailize app 
+
+//(answers => {
+    //return generatePage(answers);
+//})
+//.then(data => {
+  //  return fs.writeFile(data);
+//})
+//.catch(err => {
+//    console.log(err)
+//})
 
 init();
