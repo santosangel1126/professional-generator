@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 //link to page of README being generated
-const generatePage = require('README.MD')
+const generatePage = require('./test')
 
 
 // TODO: Create an array of questions for user input
@@ -114,4 +114,4 @@ function writeToFile(filename, data) {}
 function init() {}
 
 
-function init();
+ init();

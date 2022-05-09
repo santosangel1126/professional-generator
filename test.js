@@ -47,4 +47,4 @@ function renderLicenseBadge(license){}
 
 function renderLicenseLink(license){}
 
-module.exports = generateREADME;
+module.exports = generateMarkdown;
